@@ -1,64 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
-*{
-    font-family: 'Poppins',cursive;
-}
-body{
-        color: azure;
-        width: 100%;
-        height: 82vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: black;
-        /* padding-top: -30; */
-    }
 
-    .botones{
-        padding: 9px;
-        border-radius: 80px;
-        background-color: transparent;
-        border: none;
-    }
+* {
+    font-family: 'Poppins', cursive;
+}
+
+body {
+    color: azure;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.botones {
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
 
 .botones a {
     background-color: lightpink;
     padding: 9px;
     border-radius: 80px;
-    display: inline-block; /* Asegura que el botón se comporte como un bloque */
-    text-decoration: none; /* Remueve subrayado del enlace */
+    display: inline-block;
+    text-decoration: none;
     color: #111;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para el hover */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .botones a:hover {
-    background-color: #eebbbb; /* Cambia el color de fondo al hacer hover */
-    transform: scale(1.05); /* Efecto de aumento al hacer hover */
+    background-color: #eebbbb;
+    transform: scale(1.05);
 }
 
 .botones a span {
-    animation: glow 2.5s ease-in-out infinite; /* Añade la animación al texto del botón */
+    animation: glow 2.5s ease-in-out infinite;
     display: inline-block;
 }
 
-.botones a span:nth-child(1) {
-    animation-delay: 0s;
-}
-.botones a span:nth-child(2) {
-    animation-delay: 0.2s;
-}
-.botones a span:nth-child(3) {
-    animation-delay: 0.4s;
-}
-.botones a span:nth-child(4) {
-    animation-delay: 0.6s;
-}
-
-.greetings{
+.greetings {
     font-size: 8rem;
     font-weight: 900;
 }
-.greetings > span{
+
+.greetings > span {
     animation: glow 2.5s ease-in-out infinite;
     display: inline-block;
 }
@@ -74,67 +63,50 @@ body{
     }
 }
 
-.greetings > span:nth-child(1){
-    animation-delay: 0s;
+.greetings > span {
+    animation-delay: 0s; /* Puedes ajustar esto si necesitas un efecto de ola */
 }
-.greetings > span:nth-child(2){
-    animation-delay: 0.2s;
-}
-.greetings > span:nth-child(3){
-    animation-delay: 0.4s;
-}
-.greetings > span:nth-child(4){
-    animation-delay: 0.6s;
-}
-.greetings > span:nth-child(5){
-    animation-delay: 0.8s;
-}
-.greetings > span:nth-child(6){
-    animation-delay: 1s;
-}
-.greetings > span:nth-child(7){
-    animation-delay: 1.2s;
-}
-.greetings > span:nth-child(8){
-    animation-delay: 1.4s;
-}
-
 
 .description {
     font-size: 1.2rem;
     margin-bottom: 10px;
-    display: flex; /* Convierte el contenedor en un flexbox */
-    flex-direction: column; /* Alinea los elementos en columna */
-    align-items: center; /* Centra los elementos horizontalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .description span {
-    width: 100%; /* Asegura que el span ocupe todo el ancho */
-    text-align: center; /* Centra el texto dentro del span */
+    width: 100%;
+    text-align: center;
 }
 
-.description span:nth-child(2) {
-    text-align: center; /* Asegura que solo el segundo span esté centrado */
-}
-
-.button a{
-    text-decoration: none;
-    font-size: 1rem;
-    color: #111;
-}
-
-@media screen and (max-width:574px){
-    .greetings{
-        display: block;
-        font-size: 4rem;
-        font-weight: 800;
-        text-align: center;
+@media screen and (max-width: 768px) {
+    .greetings {
+        font-size: 6rem;
+        /* Cambia el tamaño de la fuente en pantallas medianas */
     }
-    .description{
-        font-size: 2rem;
+
+    .botones a {
+        padding: 8px; /* Reduce el padding en pantallas medianas */
+        font-size: 0.9rem; /* Ajusta el tamaño de fuente */
     }
-    
-    .button a{
-        font-size: 1rem;
+
+    .description {
+        font-size: 1.5rem; /* Ajusta el tamaño en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .greetings {
+        font-size: 4rem; /* Cambia a un tamaño más pequeño en pantallas pequeñas */
+    }
+
+    .description {
+        font-size: 1.2rem; /* Reduce aún más el tamaño de la fuente */
+    }
+
+    .botones a {
+        font-size: 0.8rem; /* Ajusta el tamaño de fuente para botones */
+        padding: 6px; /* Reduce padding para pantallas pequeñas */
     }
 }
